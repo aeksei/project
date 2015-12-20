@@ -153,8 +153,8 @@ class User():
 
 
 
-   		DS.SingVer(H, sign, Q)
-   		print Q.getAttr()
+   		return DS.SingVer(H, sign, Q)
+   		
    		#print map(lambda b: int(b, 16), E)
 
 	def decriptDSKey(self):

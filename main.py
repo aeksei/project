@@ -97,7 +97,10 @@ class Ui_MainWindow(QtGui.QWidget):
                 s = QtCore.QString()
                 for i in self.__msg:
                     s.append(i)
-                self.emit(QtCore.SIGNAL("msg(QString)"), s)
+                if self.myUser.checkSign('test',s):
+                	self.emit(QtCore.SIGNAL("msg(QString)"), s)
+                else:
+                	self.error("Внимание", "Сообщение неверно!!!")
 
             
 
