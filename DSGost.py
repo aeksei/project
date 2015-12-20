@@ -11,6 +11,7 @@ class DSGost():
 	__G  = None
 	
 	def __init__(self, p, a, b, n, xG, versionHash=256):
+		p = primeNum(versionHash).get()
 		self.__a  = a
 		self.__b  = b
 		self.__n  = n
